@@ -1,0 +1,154 @@
+<section class="my-services" id="services">
+  <h2 class="section__title section__title--services">My Stack</h2>
+  <div class="slider">
+      <div class="slider-track">
+          <div class="slide">
+              <img src="/html.png" alt="icono html">
+          </div>
+          <div class="slide">
+              <img src="/css.png" alt="icono css">
+          </div>
+          <div class="slide">
+              <img src="/javascript.png" alt="icono javascript">
+          </div>
+          <div class="slide">
+              <img src="/react.png" alt="icono react">
+          </div>
+          <div class="slide">
+              <img src="/git.png" alt="icono git">
+          </div>
+          <div class="slide">
+              <img src="/node.png" alt="icono node">
+          </div>
+          <div class="slide">
+              <img src="/npm.png" alt="icono npm">
+          </div>
+
+          <div class="slide">
+              <img src="/html.png" alt="icono html">
+          </div>
+          <div class="slide">
+              <img src="/css.png" alt="icono css">
+          </div>
+          <div class="slide">
+              <img src="/javascript.png" alt="icono javascript">
+          </div>
+          <div class="slide">
+              <img src="/react.png" alt="icono react">
+          </div>
+          <div class="slide">
+              <img src="/git.png" alt="icono git">
+          </div>
+          <div class="slide">
+              <img src="/node.png" alt="icono node">
+          </div>
+          <div class="slide">
+              <img src="/npm.png" alt="icono npm">
+          </div>
+      </div> <!-- / slider-track -->
+
+  </div> <!-- / slider -->
+
+  <a href="#work" class="btn">My Work</a>
+</section>
+
+<style>
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(/services-bg.jpg);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+/* SLIDER */
+
+.slider {
+    width: 90%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5em;
+}
+
+@media (min-width: 600px) {
+    .slider {
+        width: 50%;
+        height: 250px;
+    }
+}
+
+.slider .slider-track {
+    display: flex;
+    width: calc(150px * 14);
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
+@media (min-width: 600px) {
+    .slider .slider-track {
+        display: flex;
+        width: calc(250px * 14);
+        animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+}
+
+.slide {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    perspective: 100px;
+}
+
+@media (min-width: 600px) {
+    .slide {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+.slide img {
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide img:hover {
+    transform: translateZ(20px);
+}
+</style>
